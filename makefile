@@ -11,7 +11,7 @@ select:
 reset:
 	sudo xcode-select -r
 
-_rest: zig cc v
+_rest: zig cc
 rest: select _rest reset_select
 
 ada_libs= $(foreach lib, $(libs), -largs $(lib))
@@ -23,5 +23,3 @@ zig: zig_square.zig
 
 cc: cc_square.cc
 	clang++ -std=c++20 $(flags) $(libs) -o cc_square -O3 cc_square.cc
-v: v_square.v
-	v v_square.v
