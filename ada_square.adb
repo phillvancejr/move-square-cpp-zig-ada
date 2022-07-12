@@ -19,7 +19,7 @@ procedure ada_square is
 	x, y : integer := 0;
 
     -- clamp in bounds of window
-	function clamp(val: integer) return integer is (if val < 0 then 0
+    function clamp(val: integer) return integer is (if val < 0 then 0
                                                     elsif val > max_pos then max_pos
         else val);
 
