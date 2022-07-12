@@ -68,9 +68,9 @@ procedure ada_square is
     end keyboard;
 
     -- clamp in bounds of window
-	function clamp(val: Pos) return Valid_Pos is (if val < Valid_Pos'first then Valid_Pos'first
-												  elsif val > Valid_Pos'last then Valid_Pos'last
-												  else val);
+    function clamp(val: Pos) return Valid_Pos is (if val < Valid_Pos'first then Valid_Pos'first
+                                                  elsif val > Valid_Pos'last then Valid_Pos'last
+else val);
 
 begin
     mfb_set_keyboard_callback(window, keyboard'unrestricted_access);
