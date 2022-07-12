@@ -49,7 +49,7 @@ int main()
             break;
         default:
             break;
-        }});
+    }});
 
     while (mfb_wait_sync(window)) {
         if (mfb_update_ex(window, pixels.data(), window_size, window_size) < 0)
