@@ -10,24 +10,24 @@ with interfaces.c.strings; use interfaces.c.strings; -- new_string
 
 procedure ada_square is
     title:  chars_ptr := new_string("Ada Move Square");
-	window_size : constant := 500;
+    window_size : constant := 500;
     square_size : constant := 50;
     speed		: constant := 10;
     white		: constant unsigned_32 := (shift_left(255,16) or shift_left(255,8) or 255);
-	max_pos		: constant := window_size - square_size -1;
-		
-	type Pos is new integer range 0 .. window_size - square_size - 1;	
-	x, y : Pos := Pos'first;
+    max_pos		: constant := window_size - square_size -1;
 
-	function "+"(a: Pos; b: integer) return Pos is
-		temp  : integer := integer(a) + b;
-		first : integer := integer(Pos'first);
-		last  : integer := integer(Pos'last);
-	begin
-		return Pos((if temp < first then  first
-					elsif temp > last then last
-					else temp));
-	end;
+    type Pos is new integer range 0 .. window_size - square_size - 1;	
+    x, y : Pos := Pos'first;
+
+    function "+"(a: Pos; b: integer) return Pos is
+        temp  : integer := integer(a) + b;
+        first : integer := integer(Pos'first);
+        last  : integer := integer(Pos'last);
+    begin
+        return Pos((if temp < first then  first
+                    elsif temp > last then last
+                    else temp));
+    end;
 
     type Direction is (left, right, up, down);
     move :  array(Direction) of integer := (others=>0);
