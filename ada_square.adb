@@ -8,7 +8,6 @@ with interfaces.c; use interfaces.c;-- c types
 with interfaces.c.extensions; -- bool
 with interfaces.c.strings; use interfaces.c.strings; -- new_string
 
-
 procedure ada_square is
     title:  chars_ptr := new_string("Ada Move Square");
 	window_size : constant := 500;
@@ -21,8 +20,8 @@ procedure ada_square is
 
     -- clamp in bounds of window
 	function clamp(val: integer) return integer is (if val < 0 then 0
-	elsif val > max_pos then max_pos
-	else val);
+													elsif val > max_pos then max_pos
+													else val);
 
     type Direction is (left, right, up, down);
     move :  array(Direction) of integer := (others=>0);
