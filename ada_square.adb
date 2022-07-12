@@ -10,13 +10,13 @@ with interfaces.c.strings; use interfaces.c.strings; -- new_string
 
 procedure ada_square is
     title:  chars_ptr := new_string("Ada Move Square");
-	window_size : constant := 500;
+    window_size : constant := 500;
     square_size : constant := 50;
     speed		: constant := 10;
     white		: constant unsigned_32 := (shift_left(255,16) or shift_left(255,8) or 255);
-	max_pos		: constant := window_size - square_size -1;
+    max_pos		: constant := window_size - square_size -1;
 		
-	x, y : integer := 0;
+    x, y : integer := 0;
 
     -- clamp in bounds of window
     function clamp(val: integer) return integer is (if val < 0 then 0
