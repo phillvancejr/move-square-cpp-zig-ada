@@ -13,12 +13,7 @@ auto y = 0;
 constexpr auto speed = 10;
 constexpr auto max_pos = window_size - square_size;
 
-enum Direction { 
-	left, 
-	right, 
-	up, 
-	down,
-};
+enum Direction { left, right, up, down };
 
 auto move = std::array<int, 4>{0};
 

@@ -23,3 +23,5 @@ zig: zig_square.zig
 
 cc: cc_square.cc
 	clang++ -std=c++20 $(flags) $(libs) -o cc_square -O3 cc_square.cc
+zcc: cc_square.cc
+	zig c++ -std=c++20 $(flags) $(libs) -o cc_zig_square -O3 cc_square.cc
