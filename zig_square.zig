@@ -11,7 +11,7 @@ const square_size = 50;
 const white = (255 << 16) | (255 << 8) | 255;
 var square_x : i32 = 0;
 var square_y : i32 = 0;
-const speed = 5;
+const speed = 10;
 const max_pos = width - square_size;
 
 const left = 0;
