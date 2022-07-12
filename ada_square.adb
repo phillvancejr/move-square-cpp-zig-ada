@@ -8,6 +8,7 @@ with interfaces.c; use interfaces.c;-- c types
 with interfaces.c.extensions; -- bool
 with interfaces.c.strings; use interfaces.c.strings; -- new_string
 
+
 procedure ada_square is
     title:  chars_ptr := new_string("Ada Move Square");
 	window_size : constant := 500;
