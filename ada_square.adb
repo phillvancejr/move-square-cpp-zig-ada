@@ -20,7 +20,7 @@ procedure ada_square is
 
     -- clamp in bounds of window
 	function clamp(val: integer) return integer is (if val < 0 then 0
-        elsif val > max_pos then max_pos
+                                                    elsif val > max_pos then max_pos
         else val);
 
     type Direction is (left, right, up, down);
