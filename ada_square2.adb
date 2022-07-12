@@ -37,8 +37,8 @@ procedure ada_square is
 
     procedure draw_square(x, y: Pos) is
         index: integer;
-		xi : integer := integer(x);
-		yi : integer := integer(y);
+        xi : integer := integer(x);
+        yi : integer := integer(y);
     begin
         for row in yi .. yi + square_size  loop
             for col in xi .. xi + square_size  loop
@@ -75,8 +75,8 @@ begin
     while mfb_wait_sync(window) loop
         exit when mfb_update_ex(window, pixels'address, window_size, window_size) < 0;
         -- update
-		x := @ + (move(left) + move(right)) * speed;
-		y := @ + (move(up) + move(down)) * speed;
+        x := @ + (move(left) + move(right)) * speed;
+        y := @ + (move(up) + move(down)) * speed;
         ---- render
         clear_screen;
         draw_square(x,y);
