@@ -67,8 +67,8 @@ begin
     while mfb_wait_sync(window) loop
         exit when mfb_update_ex(window, pixels'address, window_size, window_size) < 0;
         -- update
-		x := clamp(@ + (move(left) + move(right)) * speed);
-		y := clamp(@ + (move(up) + move(down)) * speed);
+        x := clamp(@ + (move(left) + move(right)) * speed);
+        y := clamp(@ + (move(up) + move(down)) * speed);
         ---- render
         clear_screen;
         draw_square(x,y);
